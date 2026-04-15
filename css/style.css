@@ -229,22 +229,175 @@ header {
 
 .chat {
     grid-area: chat;
-    background-color: #fff;
+    background-color: #f9f9f9;
     border-left: 1px solid #eee;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    /* Permite rolar a lista de mensagens */
+    border-radius: 75px 0px 0px 0px;
+    align-items: center;
+
 
     & .fixed {
         position: sticky;
-        /* Mantém o título "Stats/Messages" fixo no topo da barra lateral */
-        top: 0;
-        background: #fff;
+        background-color: #f9f9f9;
         padding: 20px;
-        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        align-items: center;
+        padding-top: 72px;
+        top: 0;
+
+        & .heading {
+            display: flex;
+            gap: 80px;
+            align-items: center;
+
+            & .stats {
+                font-size: 16px;
+                font-weight: 600;
+                color: #828282;
+            }
+
+            & .messages {
+                font-size: 16px;
+                font-weight: 700;
+                color: #333;
+            }
+        }
+
+        & .line {
+            width: 260px;
+            border: 1px solid #e0e0e0;
+        }
+
     }
+
+    & .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        & .message-card {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 25px 20px;
+            width: 218px;
+            height: 119px;
+            background: #fff;
+            border-radius: 20px;
+
+            & .top {
+                display: flex;
+                gap: 60px;
+                align-items: center;
+                justify-content: center;
+
+                & .icon {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 10.77px;
+                    background-color: #E5A0FF;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+
+                    & p {
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #fff;
+                    }
+                }
+
+                & p {
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: #bdbdbd;
+                    white-space: nowrap;
+                }
+            }
+
+            & .bottom {
+                display: flex;
+                gap: 34px;
+                justify-content: left;
+
+                & .name-resume {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+
+                    & h2 {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #333;
+                        white-space: nowrap;
+                    }
+
+                    & p {
+                        font-size: 10px;
+                        font-weight: 600;
+                        color: #bdbdbd;
+                        white-space: nowrap;
+                    }
+                }
+
+                & img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        & .message-card:hover {
+            cursor: pointer;
+            gap: 27px;
+            padding: 17px;
+            width: 260px;
+            height: 140px;
+
+            & .top {
+                gap: 80px;
+
+                & .icon {
+
+                    & p {
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #fff;
+                    }
+                }
+
+                & p {
+                    font-size: 12px;
+                }
+            }
+
+            & .bottom {
+                gap: 31px;
+
+                & .name-resume {
+                    gap: 15px;
+
+                    & h2 {
+                        font-size: 14px;
+                    }
+
+                    & p {
+                        font-size: 12px;
+                    }
+                }
+
+            }
+        }
+    }
+
 }
+
 
 .main-content {
     grid-area: main;
