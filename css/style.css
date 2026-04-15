@@ -153,8 +153,7 @@ header {
 .sidebar {
     grid-area: sidebar;
     overflow-y: auto;
-    width: fit-content;
-    height: fit-content;
+    width: 214px;
     gap: 10px;
     margin-left: 20px;
     margin-top: 26px;
@@ -182,7 +181,7 @@ header {
             font-size: 16px;
             font-weight: 700;
             color: #828282;
-            justify-content: space-evenly;
+            gap: 70px;
         }
 
         details[open] summary>img {
@@ -222,7 +221,7 @@ header {
     }
 
     & .line {
-        width: 214px;
+        width: 150px;
         border: 1px solid #DDE7F1;
     }
 }
@@ -401,9 +400,56 @@ header {
 
 .main-content {
     grid-area: main;
-    padding: 30px;
     overflow-y: auto;
     background-color: #ffffff;
+
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 41px;
+
+        & .heading {
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+
+            & .greet {
+                display: flex;
+                gap: 10px;
+
+                & h2 {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #ffa14e;
+                }
+            }
+
+            & h2 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #1f1f1f;
+            }
+        }
+
+        & .data-analytics {
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
+
+            & .diagram-1 {
+                width: 90%;
+            }
+
+            & .diagram-2-3 {
+                display: flex;
+                gap: 59px;
+                width: 90%;
+
+            }
+        }
+    }
 }
 
 .main-content::-webkit-scrollbar,
